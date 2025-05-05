@@ -56,18 +56,19 @@
             <div class="row gx-0 align-items-center" style="height: 45px;">
                 <div class="col-lg-6 text-center text-lg-start mb-lg-0">
                     <div class="d-flex flex-wrap">
-                        <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-secondary me-2"></i>Find A Location</a>
-                        <a href="#" class="text-muted me-4"><i class="fas fa-phone-alt text-secondary me-2"></i>+254703618918</a>
-                        <a href="#" class="text-muted me-0"><i class="fas fa-envelope text-secondary me-2"></i>unatumservices@gmail.com</a>
+                        <a href="#" class="text-muted me-4"><i class="fas fa-map-marker-alt text-secondary me-2"></i>Nairobi, Kenya</a>
+                        <a href="tel:+254703618918" class="text-muted me-4"><i class="fas fa-phone-alt text-secondary me-2"></i>+254703618918</a>
+                        <a href="mailto:unatumservices@gmail.com" class="text-muted me-0"><i class="fas fa-envelope text-secondary me-2"></i>unatumservices@gmail.com</a>
                     </div>
                 </div>
                 <div class="col-lg-6 text-center text-lg-end">
                     <div class="d-flex align-items-center justify-content-end">
                         <a href="#" class="text-muted me-3"><i class="fas fa-clock text-secondary me-2"></i>Mon - Sat 8:00 - 17:30, Sunday - CLOSED</a>
                         <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-twitter"></i></a>
+                        <!--                        <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class=" fa-brands fa-square-x-twitter"></i></a>-->
                         <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://linkedin.com/company/unatum" target="_blank" class="btn btn-primary btn-square border border-white me-3"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
@@ -104,7 +105,7 @@
                     </div>
                     <div class="d-flex align-items-center flex-nowrap pt-3  pt-lg-0 ms-lg-2">
                         <button class="btn btn-primary py-2 px-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
-                        <a href="#" class="btn btn-secondary py-2 px-4 ms-3 flex-wrap flex-sm-shrink-0">Get a Quote</a>
+                        <a href="#" class="btn btn-secondary py-2 px-4 ms-3 flex-wrap flex-sm-shrink-0" data-bs-toggle="modal" data-bs-target="#requestServiceModal">Get a Quote</a>
                     </div>
                 </div>
             </nav>
@@ -129,6 +130,118 @@
             </div>
         </div>
         <!-- Modal Search End -->
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="requestServiceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <form class="modal-content rounded-0" action="https://formsubmit.co/kiokovincent12@gmail.com" method="POST" id="serviceRequestForm" >
+                    <div class="modal-header bg-primary">
+                        <h4 class="modal-title mb-0 text-white" id="modalLabel">Submit Request</h4>
+                        <button type="button" class="btn-close text-white btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body px-4 py-3">
+                        <div class="mx-auto" style="max-width: 500px; font-size: 0.9rem;">
+
+                            <!-- Full Name -->
+                            <div class="mb-2">
+                                <label class="form-label">Full Name <span class="text-danger">*</span></label>
+                                <input name="name" type="text" class="form-control py-2 px-3" style="font-size: 0.9rem;" placeholder="Full Name" required>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="mb-1">
+                                <label class="form-label">Phone Number <span class="text-danger">*</span></label>
+                                <input name="phone_number" type="text" class="form-control py-2 px-3" style="font-size: 0.9rem;" placeholder="Phone Number" required>
+                            </div>
+
+                            <!-- Call me back soonest -->
+                            <div class="d-flex justify-content-end mb-2">
+                                <div class="form-check small">
+                                    <input name="call_back" class="form-check-input" type="checkbox" id="callMeBackSoonest">
+                                    <label class="form-check-label text-primary fst-italic" for="callMeBackSoonest">
+                                        Call me back soonest
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-2">
+                                <label class="form-label">Email</label>
+                                <input name="email" type="email" class="form-control py-2 px-3" style="font-size: 0.9rem;" placeholder="Email">
+                            </div>
+
+                            <!-- Request Type (Radio Buttons) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Type of Request</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="requestType" id="contractor" value="contractor">
+                                    <label class="form-check-label" for="contractor">Seeking a Contractor / Sub-contractor</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="requestType" id="generalInfo" value="general">
+                                    <label class="form-check-label" for="generalInfo">Raising a claim or complain</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="requestType" id="subContractor" value="subcontractor">
+                                    <label class="form-check-label" for="subContractor">General query / information</label>
+                                </div>
+                            </div>
+
+                            <!-- Request Task (Multi-checkbox, responsive grid) -->
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Type of works for the request</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="buildingType" type="checkbox" id="building">
+                                            <label class="form-check-label" for="building">Building, Structures and Materials</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="pavementsType" type="checkbox" id="pavements">
+                                            <label class="form-check-label" for="pavements">Pavements, Landscaping and Earthworks</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="laborType" type="checkbox" id="labor">
+                                            <label class="form-check-label" for="labor">Labor management and Machinery</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" name="otherType" type="checkbox" id="generalConstruction">
+                                            <label class="form-check-label" for="generalConstruction">Other Construction Type Request</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Message (Multiline) -->
+                            <div class="mb-3">
+                                <label class="form-label">Message <span class="text-danger">*</span></label>
+                                <textarea name="message" class="form-control py-2 px-3" style="font-size: 0.9rem;" rows="3" placeholder="Message" required></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center mb-3">
+                                <button id="submit-button" class="btn p-2 w-100 text-white btn-secondary" type="submit" style="font-size: 0.95rem;">
+                                    <i class="fa fa-paper-plane"></i> Send
+                                </button>
+                            </div>
+
+                            <!-- WhatsApp Chat CTA -->
+                            <div class="text-center mt-3">
+                                or <br/>
+                                <a href="https://wa.me/+254703618918?text='Hi! I have a request on your service.'" target="_blank" class="" style="color: #25D366;">
+                                    <i class="fab fa-whatsapp fa-2x"></i>
+                                    <strong>Chat on WhatsApp!</strong>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
 
         <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
@@ -270,6 +383,18 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="service.html"><i class="fas fa-angle-right me-2"></i> Services</a>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                            <a href="project.html"><i class="fas fa-angle-right me-2"></i> Latest Projects</a>
+                            <a href="testimonial.html"><i class="fas fa-angle-right me-2"></i> Testimonial</a>
+                            <a href="team.html"><i class="fas fa-angle-right me-2"></i> Our Team</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Our Services</h4>
                             <a href="#"><i class="fas fa-angle-right me-2"></i> General Construction</a>
                             <a href="#"><i class="fas fa-angle-right me-2"></i> Property Maintenance</a>
@@ -284,15 +409,13 @@
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-white mb-4">Contact Info</h4>
                             <a href=""><i class="fa fa-map-marker-alt me-2"></i> Marurui/Thome, Nairobi, Kenya</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> unatumservices@gmail.com</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> unatumservices@gmail.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +254703618918</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +254703618918</a>
+                            <a href="mailto:unatumservices@gmail.com"><i class="fas fa-envelope me-2"></i> unatumservices@gmail.com</a>
+                            <a href="tel:+254703618918"><i class="fas fa-phone me-2"></i> +254703618918</a>
                             <div class="footer-btn d-flex align-items-center">
                                 <a class="btn btn-secondary btn-md-square me-2" href=""><i class="fab fa-facebook-f text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square me-2" href=""><i class="fab fa-twitter text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square me-2" href=""><i class="fab fa-tiktok text-white"></i></a>
                                 <a class="btn btn-secondary btn-md-square me-2" href=""><i class="fab fa-instagram text-white"></i></a>
-                                <a class="btn btn-secondary btn-md-square me-0" href=""><i class="fab fa-linkedin-in text-white"></i></a>
+                                <a class="btn btn-secondary btn-md-square me-0" href="https://linkedin.com/company/unatum"><i class="fab fa-linkedin-in text-white"></i></a>
                             </div>
                         </div>
                     </div>
@@ -300,7 +423,6 @@
             </div>
         </div>
         <!-- Footer End -->
-
 
         <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
